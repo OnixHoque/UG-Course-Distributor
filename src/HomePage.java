@@ -8,6 +8,7 @@ import javax.swing.JToolBar;
 
 import java.awt.BorderLayout;
 
+import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JButton;
@@ -32,8 +33,17 @@ import org.eclipse.wb.swing.FocusTraversalOnArray;
 import windowless.KB;
 
 import java.awt.Component;
+
 import javax.swing.border.BevelBorder;
 import javax.swing.border.EmptyBorder;
+import javax.swing.SwingConstants;
+import java.awt.Rectangle;
+import java.awt.Cursor;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.EtchedBorder;
+import javax.swing.border.LineBorder;
+import java.awt.Color;
+import javax.swing.border.MatteBorder;
 
 
 public class HomePage {
@@ -48,6 +58,11 @@ public class HomePage {
 	HomePage hp;
 	Modify m;
 	Export exp;
+	private JToolBar toolBar_1;
+	private JTabbedPane tabbedPane;
+	private JScrollPane sp;
+	private JScrollPane sp2;
+	private JScrollPane sp3;
 	/**
 	 * Launch the application.
 	 */
@@ -165,7 +180,7 @@ public class HomePage {
 		}
 		else if (i == 0)
 		{
-			lblStatus.setText("Status: Configuration file loaded successfully");
+			lblStatus.setText("Status: Ready");
 		}
 		else
 		{
@@ -186,6 +201,7 @@ public class HomePage {
 		s = new Summary();
 		s.setVisible(true);
 		m = new Modify(frmUgCourseDistributor, "", Dialog.ModalityType.MODELESS, hp, s);
+		frmUgCourseDistributor.setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{toolBar_1, lblStatus, tabbedPane, sp, tblFaculty, sp2, tblTheory, sp3, tblSessional}));
 		exp = new Export();
 		//m.setVisible(false);
 	}
@@ -237,9 +253,14 @@ public class HomePage {
 		
 		
 		JToolBar toolBar = new JToolBar();
+		toolBar.setName("Toolbar");
+		toolBar.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+		toolBar.setBorder(new CompoundBorder(new EmptyBorder(2, 2, 2, 2), UIManager.getBorder("ToolBar.border")));
 		frmUgCourseDistributor.getContentPane().add(toolBar, BorderLayout.NORTH);
 		
 		JButton btnUpdate = new JButton("Edit");
+		btnUpdate.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+		btnUpdate.setIcon(new ImageIcon(getClass().getClassLoader().getResource("edit2.png")));
 		//hp = this;
 		btnUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -252,6 +273,9 @@ public class HomePage {
 		toolBar.add(btnUpdate);
 		
 		JButton btnRefresh = new JButton("Refresh");
+		//btnRefresh.setHorizontalTextPosition(JLabel.CENTER);
+		//btnRefresh.setVerticalTextPosition(JLabel.BOTTOM);
+		btnRefresh.setIcon(new ImageIcon(getClass().getClassLoader().getResource("refresh.png")));
 		btnRefresh.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				//KB.readFromFile();
@@ -261,6 +285,9 @@ public class HomePage {
 		toolBar.add(btnRefresh);
 		
 		JButton btnSave = new JButton("Export");
+		//btnSave.setHorizontalTextPosition(JLabel.CENTER);
+		//btnSave.setVerticalTextPosition(JLabel.BOTTOM);
+		btnSave.setIcon(new ImageIcon(getClass().getClassLoader().getResource("_export.png")));
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//Export export = new Export();
@@ -269,26 +296,29 @@ public class HomePage {
 		});
 		toolBar.add(btnSave);
 		
-		JToolBar toolBar_1 = new JToolBar();
+		toolBar_1 = new JToolBar();
+		toolBar_1.setBorder(new CompoundBorder(UIManager.getBorder("ToolBar.border"), new EmptyBorder(5, 5, 5, 5)));
+		toolBar_1.setFloatable(false);
 		frmUgCourseDistributor.getContentPane().add(toolBar_1, BorderLayout.SOUTH);
 		
 		lblStatus = new JLabel("Status: Ready");
 		toolBar_1.add(lblStatus);
 		
-		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane.setBorder(new EmptyBorder(0, 5, 0, 5));
 		frmUgCourseDistributor.getContentPane().add(tabbedPane, BorderLayout.CENTER);
 		
 		tblFaculty = new JTable();
-		JScrollPane sp=new JScrollPane(tblFaculty); 
+		sp=new JScrollPane(tblFaculty); 
+		sp.setBorder(UIManager.getBorder("FormattedTextField.border"));
 		tabbedPane.addTab("Faculty", null, sp, null);
 		
 		tblTheory = new JTable();
-		JScrollPane sp2 =new JScrollPane(tblTheory);
+		sp2 =new JScrollPane(tblTheory);
 		tabbedPane.addTab("Theory Course", null, sp2, null);
 		
 		tblSessional = new JTable();
-		JScrollPane sp3=new JScrollPane(tblSessional);
+		sp3=new JScrollPane(tblSessional);
 		tabbedPane.addTab("Sessional", null, sp3, null);
 		
 		frmUgCourseDistributor.getContentPane().setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{toolBar_1, tblFaculty, tblTheory, tblSessional}));
