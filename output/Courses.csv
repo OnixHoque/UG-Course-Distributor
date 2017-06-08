@@ -1,0 +1,141 @@
+Generated On: 06-06-2017 08:53:45 AM
+
+,UG Course Distribution Summary,
+
+Level-1
+Theory
+Ser,Course Code,Course Title,CtHr,Teacher,Remark
+1,CSE-101,Discrete Mathematics,3.0,Lt Col Amir,
+2,CSE-105,Structured Programming Language,3.0,Lt Col Razzak (1st half);  Lec Anik (2nd half),
+,,Total,6.0,
+
+Sessional
+Ser,Course Code,Course Title,CrHr,Teacher,Total CtHr,Remark
+1,CSE-106,Structured Programming Language,1.5,5x Teachers,15.0,Brig Zakir;  Col Datta;  Lt Col Razzak;  Lec Jannat;  Lec Anik
+,,,,Total,15.0,
+
+
+Non-Departmental
+Theory
+Ser,Course Code,Course Title,CtHr,Teacher,Remark
+1,CSE-271 (PME),C Programming,2.0,Col Datta,
+2,CSE-121 (NSE),Computer Programming,3.0,Lt Col Masud (1st half);  Lec Habiba (2nd half),
+3,CSE-181 (IPE),C Programming,3.0,Maj Atique,
+,,Total,8.0,
+
+Sessional
+Ser,Course Code,Course Title,CrHr,Teacher,Total CtHr,Remark
+1,CSE-272 (PME),C Programming Sessional,1.5,2x Teachers,6.0,Col Datta;  Lec Habiba
+2,CSE-122 (NSE),Computer Programming Sessional,0.75,2x Teachers,6.0,Lt Col Masud;  Lec Habiba
+3,CSE-182 (IPE),C Programming Sessional,1.5,2x Teachers,6.0,Maj Atique;  Lec Rubyeat
+,,,,Total,18.0,
+
+Level-2
+Theory
+Ser,Course Code,Course Title,CtHr,Teacher,Remark
+1,CSE-211 A,DEPT,3.0,Lt Col Shihab,
+2,CSE-211 B,DEPT,3.0,Capt Rejwana,
+3,CSE-213 A,Computer Architecture,3.0,Col Datta,
+4,CSE-213 B,Computer Architecture,3.0,Lt Cdr Anis,
+5,CSE-215 A,Algorithms,3.0,BUET,
+6,CSE-215 B,Algorithms,3.0,BUET,
+7,CSE-217 A,Theory of Computation,3.0,BUET,
+8,CSE-217 B,Theory of Computation,3.0,BUET,
+9,HUM-215 A,Engineering Ethics,2.0,Brig Zakir,
+10,HUM-215 B,Engineering Ethics,2.0,Brig Zakir (1st half);  GpCapt Afzal (2nd half),
+,,Total,28.0,
+
+Sessional
+Ser,Course Code,Course Title,CrHr,Teacher,Total CtHr,Remark
+1,CSE-210 A,Assembly Language Programming,1.5,4x Teachers,12.0,Maj Rabbi;  Lec Sharifa;  Lec Tasmiah;  Lec Nazia
+2,CSE-210 B,Assembly Language Programming,1.5,4x Teachers,12.0,Maj Rabbi;  Lec Nawrin;  Lec Habiba;  Lec Nazia
+3,CSE-212 A,DEPT Sessional,0.75,3x Teachers,9.0,GpCapt Afzal;  Lt Col Amir;  Capt Rejwana
+4,CSE-212 B,DEPT Sessional,0.75,3x Teachers,9.0,Lt Col Amir;  Capt Rejwana;  Lt Col Shihab
+5,CSE-216 A,Algorithms Sessional,1.5,3x Teachers,9.0,Lec Wali (1st half);  BUET;  Lec Anika;  Lec Najia Manjur (2nd half)
+6,CSE-216 B,Algorithms Sessional,1.5,3x Teachers,9.0,Lec Wali (1st half);  BUET;  Lec Jannat;  Lec Anik (2nd half)
+7,CSE-220 A,Object Oriented Programming language Sessional-II,0.75,3x Teachers,9.0,Maj Atique;  Lec Zinia;  Lec Anik
+8,CSE-220 B,Object Oriented Programming language Sessional-II,0.75,3x Teachers,9.0,Lec Sanjida;  Lec Zinia;  Lec Anik
+,,,,Total,78.0,
+
+
+Non-Departmental
+Theory
+Ser,Course Code,Course Title,CtHr,Teacher,Remark
+,,Total,0.0,
+
+Sessional
+Ser,Course Code,Course Title,CrHr,Teacher,Total CtHr,Remark
+,,,,Total,0.0,
+
+Level-3
+Theory
+Ser,Course Code,Course Title,CtHr,Teacher,Remark
+1,CSE-311 A,Numerical Analysis,3.0,GpCapt Afzal (1st half);  Col Humayun (2nd half),
+2,CSE-311 B,Numerical Analysis,3.0,GpCapt Afzal (1st half);  Col Humayun (2nd half),
+3,CSE-313 A,Mathematical Analysis for Computer Science,3.0,Maj Rabbi,
+4,CSE-313 B,Mathematical Analysis for Computer Science,3.0,Lec Wali,
+5,CSE-315 A,Digital System Design,3.0,Lec Anika,
+6,CSE-315 B,Digital System Design,3.0,Lec Nawrin,
+7,CSE-317 A,Data Communication,3.0,Lt Col Mahboob,
+8,CSE-317 B,Data Communication,3.0,Lt Col Mahboob (1st half);  Lec Najia Manjur (2nd half),
+9,CSE-319 A,Software Engineering,3.0,Maj Nazrul,
+10,CSE-319 B,Software Engineering,3.0,Maj Nazrul (1st half);  Lec Rubyeat (2nd half),
+,,Total,30.0,
+
+Sessional
+Ser,Course Code,Course Title,CrHr,Teacher,Total CtHr,Remark
+1,CSE-316 A,Digital System Design Sessional,0.75,2x Teachers,6.0,Lec Nawrin;  Lec Anika
+2,CSE-316 B,Digital System Design Sessional,0.75,2x Teachers,6.0,Lec Nawrin;  Lec Anika
+3,CSE-318 A,Data Communication Sessional,0.75,3x Teachers,9.0,Lt Col Mahboob;  Lec Rubyeat;  Lec Najia Manjur
+4,CSE-318 B,Data Communication Sessional,0.75,3x Teachers,9.0,Lt Col Mahboob;  Lec Sanjida (2nd half);  Lec Rubyeat (1st half);  Lec Najia Manjur
+5,CSE-322 A,Software Development Sessional,1.5,4x Teachers,12.0,Maj Nazrul;  Lec Rubyeat;  Lec Jannat;  Lec Zinia
+6,CSE-322 B,Software Development Sessional,1.5,4x Teachers,12.0,Maj Nazrul;  Lec Najia Manjur;  Lec Jannat;  Lec Zinia
+,,,,Total,54.0,
+
+
+Non-Departmental
+Theory
+Ser,Course Code,Course Title,CtHr,Teacher,Remark
+,,Total,0.0,
+
+Sessional
+Ser,Course Code,Course Title,CrHr,Teacher,Total CtHr,Remark
+,,,,Total,0.0,
+
+Level-4
+Theory
+Ser,Course Code,Course Title,CtHr,Teacher,Remark
+1,CSE-411 A,VLSI Design,3.0,BUET,
+2,CSE-411 B,VLSI Design,3.0,BUET,
+3,CSE-413 A,Computer Graphics,3.0,Lt Cdr Naresh,
+4,CSE-413 B,Computer Graphics,3.0,BUET,
+5,CSE-415 A,Computer Interfacing,3.0,Lec Sharifa,
+6,CSE-415 B,Computer Interfacing,3.0,Lec Tasmiah,
+7,CSE-443 A,Pattern Recognition,3.0,Prof Dr.Mahbub,
+8,CSE-443 B,Pattern Recognition,3.0,Prof Dr.Mahbub (1st half);  Lec Sanjida (2nd half),
+9,CSE-449,Mobile and Ubiquitous Computing,3.0,Lt Cdr Anis (1st half);  Maj Atique (2nd half),
+,,Total,27.0,
+
+Sessional
+Ser,Course Code,Course Title,CrHr,Teacher,Total CtHr,Remark
+1,CSE-412 A,VLSI Design Sessional,0.75,2x Teachers,6.0,Lec Nipi;  Lec Moumita
+2,CSE-412 B,VLSI Design Sessional,0.75,2x Teachers,6.0,Lec Nipi;  Lec Moumita
+3,CSE-414 A,Computer Graphics Sessional,1.5,4x Teachers,12.0,Lt Cdr Naresh;  BUET;  Lec Moumita;  Lec Nazia
+4,CSE-414 B,Computer Graphics Sessional,1.5,4x Teachers,12.0,Lt Cdr Naresh;  BUET;  Lec Moumita;  Lec Nazia
+5,CSE-416 A,Computer Interfacing Sessional,1.5,4x Teachers,12.0,Col Humayun;  Lt Cdr Anis;  Lec Sharifa;  Lec Tasmiah
+6,CSE-416 B,Computer Interfacing Sessional,1.5,4x Teachers,12.0,Lt Col Mahboob;  Lt Cdr Anis;  Lec Sharifa;  Lec Tasmiah
+7,CSE-444 A,Pattern Sessional ,0.75,3x Teachers,9.0,Prof Dr.Mahbub;  Lec Sanjida;  Lec Nipi
+8,CSE-444 B,Pattern Sessional,0.75,3x Teachers,9.0,Prof Dr.Mahbub;  Lec Sanjida;  Lec Nipi
+9,CSE-450 C,Mobile and Ubiquitous Computing Sessional,0.75,2x Teachers,6.0,GpCapt Afzal;  Lt Col Amir
+,,,,Total,84.0,
+
+
+Non-Departmental
+Theory
+Ser,Course Code,Course Title,CtHr,Teacher,Remark
+,,Total,0.0,
+
+Sessional
+Ser,Course Code,Course Title,CrHr,Teacher,Total CtHr,Remark
+,,,,Total,0.0,
+

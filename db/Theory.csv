@@ -1,0 +1,35 @@
+CODE,TITLE,CrHr,CtHr,NONDEPT,LEVEL
+CSE-101,Discrete Mathematics,3,3,0,1
+CSE-105,Structured Programming Language,3,3,0,1
+CSE-271 (PME),C Programming,2,2,1,1
+CSE-121 (NSE),Computer Programming,3,3,1,1
+CSE-181 (IPE),C Programming,3,3,1,1
+CSE-211 A,DEPT,3,3,0,2
+CSE-211 B,DEPT,3,3,0,2
+CSE-213 A,Computer Architecture,3,3,0,2
+CSE-213 B,Computer Architecture,3,3,0,2
+CSE-215 A,Algorithms,3,3,0,2
+CSE-215 B,Algorithms,3,3,0,2
+CSE-217 A,Theory of Computation,3,3,0,2
+CSE-217 B,Theory of Computation,3,3,0,2
+HUM-215 A,Engineering Ethics,2,2,0,2
+HUM-215 B,Engineering Ethics,2,2,0,2
+CSE-311 A,Numerical Analysis,3,3,0,3
+CSE-311 B,Numerical Analysis,3,3,0,3
+CSE-313 A,Mathematical Analysis for Computer Science,3,3,0,3
+CSE-313 B,Mathematical Analysis for Computer Science,3,3,0,3
+CSE-315 A,Digital System Design,3,3,0,3
+CSE-315 B,Digital System Design,3,3,0,3
+CSE-317 A,Data Communication,3,3,0,3
+CSE-317 B,Data Communication,3,3,0,3
+CSE-319 A,Software Engineering,3,3,0,3
+CSE-319 B,Software Engineering,3,3,0,3
+CSE-411 A,VLSI Design,3,3,0,4
+CSE-411 B,VLSI Design,3,3,0,4
+CSE-413 A,Computer Graphics,3,3,0,4
+CSE-413 B,Computer Graphics,3,3,0,4
+CSE-415 A,Computer Interfacing,3,3,0,4
+CSE-415 B,Computer Interfacing,3,3,0,4
+CSE-443 A,Pattern Recognition,3,3,0,4
+CSE-443 B,Pattern Recognition,3,3,0,4
+CSE-449,Mobile and Ubiquitous Computing,3,3,0,4

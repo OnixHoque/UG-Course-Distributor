@@ -1,0 +1,28 @@
+CODE,TITLE,CrHr,CtHr,NONDEPT,LEVEL,CAPACITY
+CSE-106,Structured Programming Language,1.5,3,0,1,5
+CSE-272 (PME),C Programming Sessional,1.5,3,1,1,2
+CSE-122 (NSE),Computer Programming Sessional,0.75,3,1,1,2
+CSE-182 (IPE),C Programming Sessional,1.5,3,1,1,2
+CSE-210 A,Assembly Language Programming,1.5,3,0,2,4
+CSE-210 B,Assembly Language Programming,1.5,3,0,2,4
+CSE-212 A,DEPT Sessional,0.75,3,0,2,3
+CSE-212 B,DEPT Sessional,0.75,3,0,2,3
+CSE-216 A,Algorithms Sessional,1.5,3,0,2,3
+CSE-216 B,Algorithms Sessional,1.5,3,0,2,3
+CSE-220 A,Object Oriented Programming language Sessional-II,0.75,3,0,2,3
+CSE-220 B,Object Oriented Programming language Sessional-II,0.75,3,0,2,3
+CSE-316 A,Digital System Design Sessional,0.75,3,0,3,2
+CSE-316 B,Digital System Design Sessional,0.75,3,0,3,2
+CSE-318 A,Data Communication Sessional,0.75,3,0,3,3
+CSE-318 B,Data Communication Sessional,0.75,3,0,3,3
+CSE-322 A,Software Development Sessional,1.5,3,0,3,4
+CSE-322 B,Software Development Sessional,1.5,3,0,3,4
+CSE-412 A,VLSI Design Sessional,0.75,3,0,4,2
+CSE-412 B,VLSI Design Sessional,0.75,3,0,4,2
+CSE-414 A,Computer Graphics Sessional,1.5,3,0,4,4
+CSE-414 B,Computer Graphics Sessional,1.5,3,0,4,4
+CSE-416 A,Computer Interfacing Sessional,1.5,3,0,4,4
+CSE-416 B,Computer Interfacing Sessional,1.5,3,0,4,4
+CSE-444 A,Pattern Sessional ,0.75,3,0,4,3
+CSE-444 B,Pattern Sessional,0.75,3,0,4,3
+CSE-450 C,Mobile and Ubiquitous Computing Sessional,0.75,3,0,4,2
