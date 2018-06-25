@@ -1,4 +1,4 @@
-NAME,CATEGORY,MILITARY
+NAME, CATEGORY, MILITARY
 Brig Zakir,Perm,1
 GpCapt Afzal,Perm,1
 Col Humayun,Perm,1
@@ -25,18 +25,24 @@ Prof. Dr. Syed Akhter,Guest,0
 Prof Dr. Md Nurul Huda,Guest,0
 Assoc Prof Dr. A. A. Mamun,Guest,0
 Assoc Prof Dr. Shorab,Guest,0
-BUET,Guest,0
+1 x Prof (BUET) CSE-215,Guest,0
+1 x Prof (BUET) CSE-303,Guest,0
+1 x Prof (BUET) CSE-411,Guest,0
+1 x Lec (BUET) CSE-216,Guest,0
+1 x Lec (BUET) CSE-220,Guest,0
+1 x Lec (BUET) CSE-444,Guest,0
+1 x New Lec  (Rect)  ,Guest,0
 Lec Sharifa,Adjunct,0
 Lec Tasmiah,Adjunct,0
 Lec Nawrin,Adjunct,0
 Lec Sanjida,Adjunct,0
 Lec Anika,Adjunct,0
 Lec Rubyeat,Adjunct,0
-Lec Nipi,Adjunct,0
-Lec Najia Manjur,Adjunct,0
-Lec Habiba,Adjunct,0
-Lec Moumita,Adjunct,0
-Lec Nazia,Adjunct,0
+Lec Nipi ,Adjunct,0
+Lec Najia Manjur ,Adjunct,0
+Lec Habiba ,Adjunct,0
+Lec Moumita ,Adjunct,0
+Lec Nazia ,Adjunct,0
 Lec Jannat,Adjunct,0
 Lec Zinia,Adjunct,0
 Lec Anik,Adjunct,0
