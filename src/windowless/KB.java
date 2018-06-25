@@ -37,6 +37,27 @@ public class KB {
 	public static int [][] theoryMatrix;
 	public static int [][] sessionalMatrix;
 	
+	public static int getNonDeptCount(int level, boolean sessional)
+	{
+		int count = 0;
+		if (!sessional)
+		{
+			for (int i = 0; i<KB.theoryCount; i++)
+		    	if ((KB.theoryList.get(i).level == level) && KB.theoryList.get(i).non_dept)
+		    	{
+		    		count++;
+		    	}
+		}
+		else
+		{
+			for (int i = 0; i<KB.sessionalCount; i++)
+		    	if ((KB.sessionalList.get(i).level == level) && KB.sessionalList.get(i).non_dept)
+		    	{
+		    		count++;
+		    	}
+		}
+		return count;
+	}
 	public static double getSessionalTotalContact(int sessionalId)
 	{
 		double ret = 0.0;
@@ -452,3 +473,194 @@ public class KB {
 		}
 	}
 }
+
+
+
+//Old code --------
+
+/*
+package windowless;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.ObjectInputStream.GetField;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.swing.DefaultListModel;
+
+
+//The knowledgeBase
+public class KB {
+	public static ArrayList<Faculty> facultyList;
+	public static ArrayList<Theory> theoryList;
+	public static ArrayList<Sessional> sessionalList;
+	
+	//redundant
+	public static ArrayList<String> facultyNames;
+	public static ArrayList<String> theoryCodes;
+	public static ArrayList<String> sessionalCodes;
+	
+	public static DefaultListModel lm_theoryCodes, lm_sessionalCodes, assigned_teachers;
+	
+	
+	public static int facultyCount, theoryCount, sessionalCount;
+	
+	//Most important 2 2d arrays
+	public static int [][] theoryMatrix;
+	public static int [][] sessionalMatrix;
+	
+	
+	
+	public static void readFromFile()
+	{
+		readFaculty();
+		readTheory();
+		readSessional();
+		
+		facultyCount = facultyList.size();
+		theoryCount = theoryList.size();
+		sessionalCount = sessionalList.size();
+		
+		theoryMatrix = new int[facultyCount][theoryCount];
+		sessionalMatrix = new int[facultyCount][sessionalCount];
+		//System.out.println("value " + theoryMatrix[2][2] + " " + sessionalMatrix[2][2]);
+		
+		//for (int i = 0; i< facultyCount; i++)
+		//	theoryMatrix[i] = new int[theoryCount];
+	}
+	
+	private static ArrayList<String> getLinesFromFile(String filename)
+	{
+		ArrayList<String> ret = new ArrayList<>();
+		
+		try {
+
+            //File f = new File("db/Theory.csv");
+			File f = new File(filename);
+            FileInputStream fis = new FileInputStream(f);
+            BufferedReader br = new BufferedReader(new InputStreamReader(fis));
+            
+        	String line = br.readLine();	//remove the first line (Header)
+        	while ((line = br.readLine()) != null) {
+        		
+        		//System.out.println(line);
+        		ret.add(line);
+        		
+        	}
+         
+        	br.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+		
+		return ret;
+	}
+	
+	private static void readSessional()
+	{
+		ArrayList<String> lines = getLinesFromFile("db/Sessional.csv");
+		sessionalList = new ArrayList<>();
+		sessionalCodes = new ArrayList<>();
+		lm_sessionalCodes = new DefaultListModel<>();
+		for (String line : lines)
+		{
+			String [] info = line.split(",");
+    		Sessional ss;
+    		//System.out.println(info[2]);
+    		if (info[4].equals("1"))
+    		{
+    			ss = new Sessional(info[0], info[1], Double.valueOf(info[2]), Double.valueOf(info[3]), true, Integer.valueOf(info[5]),Integer.valueOf(info[6]));
+    			//lm_sessionalCodes.addElement(info[0] + " - " + info[2] + " CtHr (Non-dept)");
+    			if (ss.CrHr != 1.5)
+    				lm_sessionalCodes.addElement(info[0] + " (" + info[2] + " CreditHr, Non-dept)");
+    			else
+    				lm_sessionalCodes.addElement(info[0] + " (Non-dept)");
+    			//System.out.println("Mil");
+    		}
+    		else
+    		{
+    			ss = new Sessional(info[0], info[1], Double.valueOf(info[2]), Double.valueOf(info[3]), false, Integer.valueOf(info[5]),Integer.valueOf(info[6]));
+    			//lm_sessionalCodes.addElement(info[0] + " - " + info[2] + " CtHr");
+    			if (ss.CrHr != 1.5)
+    				lm_sessionalCodes.addElement(info[0] + " (" + info[2] + " CreditHr)");
+    			else
+    				lm_sessionalCodes.addElement(info[0]); 
+    			//System.out.println("Civ");
+    		}
+    		sessionalList.add(ss);
+    		sessionalCodes.add(info[0]);
+    		
+		}
+		
+	}
+	
+	private static void readTheory()
+	{
+		ArrayList<String> lines = getLinesFromFile("db/Theory.csv");
+		theoryList = new ArrayList<>();
+    	theoryCodes = new ArrayList<>();
+    	lm_theoryCodes = new DefaultListModel<>();
+		for (String line : lines)
+		{
+			String [] info = line.split(",");
+    		Theory th;
+    		//System.out.println(info[2]);
+    		if (info[4].equals("1"))
+    		{
+    			th = new Theory(info[0], info[1], Double.valueOf(info[2]), Double.valueOf(info[3]), true, Integer.valueOf(info[5]));
+    			if (th.CrHr != 3.0)
+    				lm_theoryCodes.addElement(info[0] + " (" + info[2] + " CreditHr, Non-dept)");
+    			else
+    				lm_theoryCodes.addElement(info[0] + " (Non-dept)");
+    			//System.out.println("Mil");
+    		}
+    		else
+    		{
+    			th = new Theory(info[0], info[1], Double.valueOf(info[2]), Double.valueOf(info[3]), false, Integer.valueOf(info[5]));
+    			if (th.CrHr != 3.0)
+    				lm_theoryCodes.addElement(info[0] + " (" + info[2] + " CreditHr)");
+    			else
+    				lm_theoryCodes.addElement(info[0]); 
+    			//System.out.println("Civ");
+    		}
+    		theoryList.add(th);
+    		theoryCodes.add(info[0]);
+    		//lm_theoryCodes.addElement(info[0]);
+    		//System.out.println(info[0]);
+		}
+		
+	}
+	private static void readFaculty()
+	{
+		ArrayList<String> lines = getLinesFromFile("db/Faculty.csv");
+		facultyList = new ArrayList<>();
+		facultyNames = new ArrayList<>();
+		
+		
+		for (String line : lines)
+		{
+			String [] info = line.split(",");
+			Faculty fc;
+    		
+			if (info[2].equals("1"))
+    		{
+    			fc = new Faculty(info[0], info[1], true);
+    			//System.out.println("Mil");
+    		}
+    		else
+    		{
+    			fc = new Faculty(info[0], info[1], false);
+    			//System.out.println("Civ");
+    		}
+    		facultyList.add(fc);
+    		facultyNames.add(info[0]);
+    		
+		}
+	}
+}
+*/

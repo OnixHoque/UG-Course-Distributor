@@ -231,6 +231,7 @@ public class HomePage {
 	private void initialize() {
 		
 		frmUgCourseDistributor = new JFrame();
+		frmUgCourseDistributor.setIconImage(Toolkit.getDefaultToolkit().getImage(HomePage.class.getResource("/windowless/icon_faculty.png")));
 		frmUgCourseDistributor.setTitle("UG Course Distributor");
 		frmUgCourseDistributor.setBounds(100, 100, 1012, 627);
 		frmUgCourseDistributor.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
@@ -260,7 +261,7 @@ public class HomePage {
 		
 		JButton btnUpdate = new JButton("Edit");
 		btnUpdate.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
-		btnUpdate.setIcon(new ImageIcon(getClass().getClassLoader().getResource("edit2.png")));
+		btnUpdate.setIcon(new ImageIcon(HomePage.class.getResource("/windowless/edit2.png")));
 		//hp = this;
 		btnUpdate.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -275,7 +276,7 @@ public class HomePage {
 		JButton btnRefresh = new JButton("Refresh");
 		//btnRefresh.setHorizontalTextPosition(JLabel.CENTER);
 		//btnRefresh.setVerticalTextPosition(JLabel.BOTTOM);
-		btnRefresh.setIcon(new ImageIcon(getClass().getClassLoader().getResource("refresh.png")));
+		btnRefresh.setIcon(new ImageIcon(HomePage.class.getResource("/windowless/refresh.png")));
 		btnRefresh.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				//KB.readFromFile();
@@ -287,7 +288,7 @@ public class HomePage {
 		JButton btnSave = new JButton("Export");
 		//btnSave.setHorizontalTextPosition(JLabel.CENTER);
 		//btnSave.setVerticalTextPosition(JLabel.BOTTOM);
-		btnSave.setIcon(new ImageIcon(getClass().getClassLoader().getResource("_export.png")));
+		btnSave.setIcon(new ImageIcon(HomePage.class.getResource("/windowless/_export.png")));
 		btnSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//Export export = new Export();
@@ -325,3 +326,145 @@ public class HomePage {
 	}
 
 }
+
+
+
+//
+////Old Code---
+//
+//import java.awt.Dialog;
+//import java.awt.Dimension;
+//import java.awt.EventQueue;
+//import java.awt.Toolkit;
+//
+//import javax.swing.JFrame;
+//import javax.swing.JToolBar;
+//
+//import java.awt.BorderLayout;
+//
+//import javax.swing.JLabel;
+//import javax.swing.JButton;
+//import javax.swing.JTabbedPane;
+//import javax.swing.JTable;
+//import javax.swing.UIManager;
+//import javax.swing.UnsupportedLookAndFeelException;
+//
+//import java.awt.event.ActionListener;
+//import java.awt.event.ActionEvent;
+//
+//import org.eclipse.wb.swing.FocusTraversalOnArray;
+//
+//import windowless.KB;
+//
+//import java.awt.Component;
+//
+//
+//public class HomePage {
+//
+//	private JFrame frmUgCourseDistributor;
+//	private JTable tblFaculty;
+//	private JTable tblTheory;
+//	private JTable tblSessional;
+//
+//	/**
+//	 * Launch the application.
+//	 */
+//	public static void main(String[] args) {
+//		EventQueue.invokeLater(new Runnable() {
+//			public void run() {
+//				try {
+//					HomePage window = new HomePage();
+//					window.frmUgCourseDistributor.setVisible(true);
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		});
+//	}
+//
+//	/**
+//	 * Create the application.
+//	 */
+//	public HomePage() {
+//		SetNativeLook();
+//		initialize();
+//		KB.readFromFile();
+//	}
+//	
+//	private void SetNativeLook()
+//	{
+//		try {
+//			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+//		} catch (ClassNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (InstantiationException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (IllegalAccessException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (UnsupportedLookAndFeelException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//	}
+//	
+//	/**
+//	 * Initialize the contents of the frame.
+//	 */
+//	private void initialize() {
+//		
+//		frmUgCourseDistributor = new JFrame();
+//		frmUgCourseDistributor.setTitle("UG Course Distributor");
+//		frmUgCourseDistributor.setBounds(100, 100, 791, 537);
+//		frmUgCourseDistributor.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		
+//		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+//		frmUgCourseDistributor.setLocation(dim.width/2-frmUgCourseDistributor.getSize().width/2, dim.height/2-frmUgCourseDistributor.getSize().height/2);
+//		
+//		
+//		JToolBar toolBar = new JToolBar();
+//		frmUgCourseDistributor.getContentPane().add(toolBar, BorderLayout.NORTH);
+//		
+//		JButton btnUpdate = new JButton("Update");
+//		btnUpdate.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent arg0) {
+//				Modify m = new Modify(frmUgCourseDistributor, "", Dialog.ModalityType.DOCUMENT_MODAL);
+//				//m.show();
+//			}
+//		});
+//		toolBar.add(btnUpdate);
+//		
+//		JButton btnRefresh = new JButton("Refresh");
+//		btnRefresh.addActionListener(new ActionListener() {
+//			public void actionPerformed(ActionEvent arg0) {
+//				KB.readFromFile();
+//			}
+//		});
+//		toolBar.add(btnRefresh);
+//		
+//		JButton btnSave = new JButton("Save");
+//		toolBar.add(btnSave);
+//		
+//		JToolBar toolBar_1 = new JToolBar();
+//		frmUgCourseDistributor.getContentPane().add(toolBar_1, BorderLayout.SOUTH);
+//		
+//		JLabel lblStatus = new JLabel("Status: Ready");
+//		toolBar_1.add(lblStatus);
+//		
+//		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+//		frmUgCourseDistributor.getContentPane().add(tabbedPane, BorderLayout.CENTER);
+//		
+//		tblFaculty = new JTable();
+//		tabbedPane.addTab("Faculty", null, tblFaculty, null);
+//		
+//		tblTheory = new JTable();
+//		tabbedPane.addTab("Theory Course", null, tblTheory, null);
+//		
+//		tblSessional = new JTable();
+//		tabbedPane.addTab("Sessional", null, tblSessional, null);
+//		frmUgCourseDistributor.getContentPane().setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{toolBar_1, tblFaculty, tblTheory, tblSessional}));
+//	}
+//
+//}
